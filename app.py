@@ -10,7 +10,7 @@ import expert_system as es  # expert_system.py
 
 st.set_page_config(page_title="Car Recommender — Polished UI", layout="wide", initial_sidebar_state="expanded")
 
-DATA_CSV = os.path.join(os.path.dirname(__file__), "data", "cars_data_normalized.csv")
+DATA_CSV = os.path.join(os.path.dirname(__file__),  "cars_data_normalized.csv")
 VALID_IMAGE_KEYS = ("image_url", "photo_url", "img", "thumbnail")
 FUEL_CATEGORIES = es.FUEL_CATEGORIES
 
@@ -487,4 +487,5 @@ st.caption(textwrap.dedent("""
     • Seating dropdown now shows actual seat counts present in the dataset along with counts (e.g., "5 seats (42)").
     • Selecting a seat option filters for cars with exactly that number of seats. Choose "Any" to disable.  
 """))
+
 
