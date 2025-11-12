@@ -4,7 +4,7 @@ import re
 from typing import Optional
 import os
 # ------- Path to your data -------
-DATA_PATH = os.path.join(os.path.dirname(__file__), "data", "cars_data_normalized.csv")
+DATA_PATH = os.path.join(os.path.dirname(__file__),  "cars_data_normalized.csv")
 # ---------- CONFIG ----------
 #DATA_CSV = "cars_data_normalized.csv"
 FUEL_CATEGORIES = ["Petrol", "Diesel", "Hybrid", "CNG"]
@@ -183,5 +183,6 @@ def recommend(df: pd.DataFrame, weights: dict, top_n: int = 20, filters: Optiona
 
     D = D.sort_values("final_score", ascending=False).reset_index(drop=True)
     return D.head(top_n)
+
 
 
