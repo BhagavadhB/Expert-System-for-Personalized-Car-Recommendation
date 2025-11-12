@@ -39,7 +39,7 @@ st.markdown(
 # cache the dataset load in Streamlit
 @st.cache_data
 def cached_load_data():
-    return es.load_data()
+    return es.load_data(DATA_CSV)
 
 
 df_raw = None
@@ -488,6 +488,7 @@ st.caption(textwrap.dedent("""
     • Seating dropdown now shows actual seat counts present in the dataset along with counts (e.g., "5 seats (42)").
     • Selecting a seat option filters for cars with exactly that number of seats. Choose "Any" to disable.  
 """))
+
 
 
 
