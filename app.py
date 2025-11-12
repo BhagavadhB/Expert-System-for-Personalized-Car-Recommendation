@@ -5,6 +5,7 @@ import io
 import textwrap
 import re
 from collections import OrderedDict
+import os
 
 import expert_system as es  # expert_system.py
 
@@ -487,5 +488,6 @@ st.caption(textwrap.dedent("""
     • Seating dropdown now shows actual seat counts present in the dataset along with counts (e.g., "5 seats (42)").
     • Selecting a seat option filters for cars with exactly that number of seats. Choose "Any" to disable.  
 """))
+
 
 
