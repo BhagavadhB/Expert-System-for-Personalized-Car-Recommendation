@@ -86,9 +86,9 @@ def format_price(inr):
         return str(inr)
 
 #load data
-def load_data(path: str = DATA_CSV) -> pd.DataFrame:
+def load_data(DATA_PATH) -> pd.DataFrame:
     """Load dataset and prepare normalized columns (fuel_category, body_type_clean, numeric casts)."""
-    df = pd.read_csv(path, low_memory=False)
+    df = pd.read_csv(DATA_PATH, low_memory=False)
     df.columns = [c.strip() for c in df.columns]
     df["fuel_raw"] = df.get("fuel_type", df.get("original_fuel_type", pd.Series(dtype=object))).astype(str)
     df["fuel_category"] = df["fuel_raw"].apply(map_fuel_to_category)
@@ -183,4 +183,5 @@ def recommend(df: pd.DataFrame, weights: dict, top_n: int = 20, filters: Optiona
 
     D = D.sort_values("final_score", ascending=False).reset_index(drop=True)
     return D.head(top_n)
+
 
