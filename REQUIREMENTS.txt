@@ -1,0 +1,16 @@
+# REQUIREMENTS
+# These modules are required to run the Expert System application.
+
+Python version: 3.11.6  
+(Maximum supported version: 3.12, as Streamlit currently supports up to Python 3.12)
+
+Required Packages:
+- streamlit == 1.51.0
+- pandas == 2.2.2
+- numpy == 1.26.2
+
+Note:
+Streamlit will not run on Python versions above 3.12 as of now.
+
+Other Dependencies (Python Standard Library modules):
+re, io, json, os, textwrap, typing, collections
